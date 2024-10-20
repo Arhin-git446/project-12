@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Positioning Demo</title>
+        <style>
+            /* General styling for the page */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 20px;
+            }
+            h2 {
+                text-align: center;
+                color: darkblue;
+            }
+            /* Style for all divs */
+            div {
+                background-color: lightyellow;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                border: 3px solid wheat;
+            }
+            /* Absolute positioning */
+            div.absolute {
+                position: absolute;
+                left: 150px;
+                top: 50px;
+                border: 3px solid green;
+                background-color: lightgreen;
+                color: black;
+            }
+            /* Relative positioning */
+            div.relative {
+                position: relative;
+                left: 120px;
+                border: 3px solid red;
+                background-color: lightpink;
+                color: black;
+            }
+            /* Fixed positioning */
+            div.fixed {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                border: 3px solid blue;
+                background-color: lightblue;
+                color: black;
+                width: 300px;
+            }
+            /* Sticky positioning */
+            div.sticky {
+                position: sticky;
+                left: 20px;
+                top: 10px;
+                width: 150px;
+                border: 3px solid purple;
+                background-color: lavender;
+            }
+            /* Style for the container to simulate scrolling */
+            .scroll-container {
+                height: 800px;
+                border: 1px solid black;
+                overflow: auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Updated CSS Positioning Example</h2>
+
+        <!-- Fixed div appears at the top-right corner of the screen -->
+        <div class="fixed">Fixed Positioning Element</div>
+
+        <div>Div with no positioning property (default layout flow)</div>
+
+        <!-- Sticky div remains sticky at the top after scrolling -->
+        <div class="scroll-container">
+            <div class="sticky">Sticky Positioning Element</div>
+
+            <!-- Relative div offsets from its original position -->
+            <div class="relative">
+                Relative Positioning Element
+                <!-- Absolute div inside a relative parent -->
+                <div class="absolute">Absolute Positioning Element</div>
+            </div>
+
+            <p>Scroll this container to see the sticky element in action.</p>
+        </div>
+        
+        <!-- Adding some space to demonstrate scrolling -->
+        <div style="height: 200px;"></div>
+    </body>
+</html>
